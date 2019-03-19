@@ -118,19 +118,23 @@
         var allFighters = $('#allFighters');
         var yourFighters = $('#yourFighters');
         var enemyFighters = $('#enemyFighters');
+        var battle = $('#battle');
         var obiWan = $('#obiWan');
         var darthMaul = $('#darthMaul');
+        var darthMaulBattle = $('#darthMaulBattle');
         var hanSolo = $('#hanSolo');
         var maceWindu = $('#maceWindu');
         var letter4 = $('#letter4');
 
+        
+
         obiWan.click(function () {
             allFighters.remove();
-            yourFighters.append("<div id='obiWan'>120</div>");
-            enemyFighters.append("<div id='darthMaul'>150</div>");
+            yourFighters.append("<div id='obiWan'>120</div><h1>");
+            enemyFighters.append("<div id='darthMaulBattle'>150</div>");
             enemyFighters.append("<div id='hanSolo'>100</div>");
             enemyFighters.append("<div id='maceWindu'>200</div>");
-
+            battle.append("<div id='obiWan'>150</div>  <p style='color: red; padding-left: 500px; padding-right: 500px; text-decoration: overline; '>VERSUS");
 
         });
         darthMaul.click(function () {
@@ -155,10 +159,20 @@
             enemyFighters.append("<div id='hanSolo'>100</div>");
             enemyFighters.append("<div id='obiWan'>200</div>");
         }); 
-        $( "div#enemyFighters > #darthMaul" ).click(function () {
-            enemyFighters.remove();
+    
+
+        $("#enemyFighters").on("click", "#darthMaulBattle", function(){
+            darthMaulBattle.remove();
+            console.log("meme");
+            battle.append("<div id='darthMaul' style='float: none; margin-left: 300px;'>150</div>");
         });
+
+     //   darthMaulBattle.on("click", function() {
+  //          alert("CLICKED!");
+   //         allFighters.remove();
+    //        battle.append("<div id='darthMaul'>150</div>");
         
+   // });
 
     </script>
 </body>

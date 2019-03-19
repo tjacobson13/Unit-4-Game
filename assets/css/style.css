@@ -1,7 +1,7 @@
 #gameModule {
    
    
-    opacity: 0.8;
+    opacity: 1;
     width: 100%;
     background-color: #6c757d;
     float: left;
@@ -20,6 +20,20 @@ h2 {
 }
 
 #obiWan, #darthMaul, #hanSolo, #maceWindu {
+    height: 200px;
+    width: 25%;
+    border: 1px solid white;
+    float: left;
+    opacity: .8;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-display: block;
+    font-size: 40px;
+    color: red;
+    cursor: pointer;
+}
+
+#obiWanBattle, #darthMaulBattle, #hanSoloBattle, #maceWinduBattle {
     height: 200px;
     width: 25%;
     border: 1px solid white;
@@ -52,12 +66,37 @@ h2 {
     background-size: cover;
 }
 
+.darthMaul {
+    background-image: url("../images/darthMaul.jpg");
+    background-size: cover;
+}
+
 #hanSolo {
     background-image: url("../images/hanSolo.jpg");
     background-size: cover;
 }
 
 #maceWindu {
+    background-image: url("../images/maceWindu.jpg");
+    background-size: cover;
+}
+
+#obiWanBattle {
+    background-image: url("../images/obiWan.jpg");
+    background-size: cover;
+}
+
+#darthMaulBattle {
+    background-image: url("../images/darthMaul.jpg");
+    background-size: cover;
+}
+
+#hanSoloBattle {
+    background-image: url("../images/hanSolo.jpg");
+    background-size: cover;
+}
+
+#maceWinduBattle {
     background-image: url("../images/maceWindu.jpg");
     background-size: cover;
 }
