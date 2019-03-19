@@ -1,0 +1,143 @@
+#gameModule {
+   
+   
+    opacity: 0.8;
+    width: 100%;
+    background-color: #6c757d;
+    float: left;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+h2 {
+    position: absolute;
+	bottom: 0;
+    left: 500;
+    color: red;
+}
+
+#obiWan, #darthMaul, #hanSolo, #maceWindu {
+    height: 200px;
+    width: 25%;
+    border: 1px solid white;
+    float: left;
+    opacity: .8;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-display: block;
+    font-size: 40px;
+    color: red;
+    cursor: pointer;
+}
+
+#obiWan:hover, #darthMaul:hover, #hanSolo:hover, #maceWindu:hover {
+    height: 200px;
+    width: 25%;
+    border: 1px solid white;
+    float: left;
+    opacity: 1;
+
+}
+
+#obiWan {
+    background-image: url("../images/obiWan.jpg");
+    background-size: cover;
+}
+
+#darthMaul {
+    background-image: url("../images/darthMaul.jpg");
+    background-size: cover;
+}
+
+#hanSolo {
+    background-image: url("../images/hanSolo.jpg");
+    background-size: cover;
+}
+
+#maceWindu {
+    background-image: url("../images/maceWindu.jpg");
+    background-size: cover;
+}
+
+
+#allFighters {
+    font-size: 40px;
+    text-decoration: underline;
+
+}
+
+#yourFighters {
+    font-size: 40px;
+    text-decoration: underline;
+    width: 80%;
+    height: 300px;
+    margin: 0% 17% 0% 17%;
+
+}
+
+#enemyFighters {
+    font-size: 40px;
+    text-decoration: underline;
+    width: 80%;
+    height: 300px;
+    margin: 0% 17% 0% 17%;
+    display: block;
+}
+
+#battle {
+    font-size: 40px;
+    text-decoration: underline;
+    width: 80%;
+    height: 300px;
+    margin: 0% 17% 0% 17%;
+
+}
+
+.navbar-nav {
+    margin: auto;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 100%;
+    height: 100%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+    color: #444;
+}
+
+.footer {
+    background-color: #343a40;
+    height: 60px;
+    width: 100%;
+}
+
+.col-8 {
+
+}
+
+.col{
+    padding-left: 0rem;
+    padding-right: 0rem;
+    overflow: hidden;
+}
+
+.footer {
+    text-align: center;
+    
+}   
+
+.color {
+opacity: 1;
+float:left; 
+margin-right: 17px;
+color: green;
+}
