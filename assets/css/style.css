@@ -130,9 +130,23 @@ h2 {
     font-size: 40px;
     text-decoration: underline;
     width: 80%;
-    height: 300px;
+    height: 500px;
     margin: 0% 17% 0% 17%;
+    float: left;
+    
 
+}
+
+#attack {
+    padding: 20px;
+    background-color: #999;
+    border-radius: 5px;
+    color: black;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 26%;
+    
 }
 
 .navbar-nav {

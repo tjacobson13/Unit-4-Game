@@ -57,50 +57,61 @@
                 </div>
             </div>
         </div>
-       
-            <div class="row">
-                    <div id="gameModule">
-                        <div class="row">
-                <div class="col-2"></div>
-                <div class="col-8">
 
-                    <div id="allFighters">Pick your Fighter!<br/></br>
-                        <div id="obiWan"><h2>120</h2></div>
-                        <div id="darthMaul"><h2>150</h2></div>
-                        <div id="hanSolo"><h2>100</h2></div>
-                        <div id="maceWindu"><h2>200</h2></div>
+        <div class="row">
+            <div id="gameModule">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+
+                        <div id="allFighters">Pick your Fighter!<br /></br>
+                            <div id="obiWan">
+                                <h2>120</h2>
+                            </div>
+                            <div id="darthMaul">
+                                <h2>150</h2>
+                            </div>
+                            <div id="hanSolo">
+                                <h2>100</h2>
+                            </div>
+                            <div id="maceWindu">
+                                <h2>200</h2>
+                            </div>
+                        </div>
                     </div>
+                    <div id="col-2"></div>
                 </div>
-                <div id="col-2"></div>
-            </div>
-            
-            <div id="row">
-                
-                
+
+                <div id="row">
+
+
                     <div id="yourFighters"></br>Your Pick<br></div>
-                
-                
-            </div>
-            <div id="row">
-                    
-                
+
+
+                </div>
+                <div id="row">
+
+
                     <div id="enemyFighters">Your Enemies: Click to fight<br></div>
-                
-                
-            </div>
-            <div id="row">
-                    
-                
-                    <div id="battle">Time to Fight!<br></div>
-                
-                
-            </div>
-        
-    </div>
-    
 
 
-</div>
+                </div>
+                <div id="row">
+
+
+                    <div id="battle">Time to Battle!</br><br></div>
+
+
+                </div>
+                <div id="row">
+
+
+                </div>
+            </div>
+
+
+
+        </div>
     </div>
 
     <div class="row">
@@ -124,17 +135,40 @@
         var darthMaulBattle = $('#darthMaulBattle');
         var hanSolo = $('#hanSolo');
         var maceWindu = $('#maceWindu');
-        var letter4 = $('#letter4');
+        var attack = $('#attack')
+        var obiWanStats = {
+            healthPoints: 120,
+            attackPower: 15,
+            counterAttackPower: 14,
+        };
 
-        
+        var darthMaulStats = {
+            healthPoints: 150,
+            attackPower: 15,
+            counterAttackPower: 14,
+        };
+
+        var hanSoloStats = {
+            healthPoints: 100,
+            attackPower: 15,
+            counterAttackPower: 14,
+        };
+
+        var maceWinduStats = {
+            healthPoints: 200,
+            attackPower: 15,
+            counterAttackPower: 14,
+        };
+
+        console.log(maceWinduStats.healthPoints);
 
         obiWan.click(function () {
             allFighters.remove();
             yourFighters.append("<div id='obiWan'>120</div><h1>");
-            enemyFighters.append("<div id='darthMaulBattle'>150</div>");
+            enemyFighters.append("<div id='darthMaul'>150</div>");
             enemyFighters.append("<div id='hanSolo'>100</div>");
             enemyFighters.append("<div id='maceWindu'>200</div>");
-            battle.append("<div id='obiWan'>150</div>  <p style='color: red; padding-left: 500px; padding-right: 500px; text-decoration: overline; '>VERSUS");
+            battle.append("<div id='obiWan'>" + obiWanStats.healthPoints + "</div>  <p style='color: red; padding-left: 500px; padding-right: 500px; text-decoration: overline; '>VERSUS");
 
         });
         darthMaul.click(function () {
@@ -143,7 +177,7 @@
             enemyFighters.append("<div id='obiWan'>150</div>");
             enemyFighters.append("<div id='hanSolo'>100</div>");
             enemyFighters.append("<div id='maceWindu'>200</div>");
-            
+            battle.append("<div id='darthMaul'>" + darthMaulStats.healthPoints + "</div>  <p style='color: red; padding-left: 500px; padding-right: 500px; text-decoration: overline; '>VERSUS");
         });
         hanSolo.click(function () {
             allFighters.remove();
@@ -151,6 +185,7 @@
             enemyFighters.append("<div id='darthMaul'>150</div>");
             enemyFighters.append("<div id='obiWan'>100</div>");
             enemyFighters.append("<div id='maceWindu'>200</div>");
+            battle.append("<div id='hanSolo'>" + hanSoloStats.healthPoints + "</div>  <p style='color: red; padding-left: 500px; padding-right: 500px; text-decoration: overline; '>VERSUS");
         });
         maceWindu.click(function () {
             allFighters.remove();
@@ -158,20 +193,60 @@
             enemyFighters.append("<div id='darthMaul'>150</div>");
             enemyFighters.append("<div id='hanSolo'>100</div>");
             enemyFighters.append("<div id='obiWan'>200</div>");
-        }); 
-    
-
-        $("#enemyFighters").on("click", "#darthMaulBattle", function(){
-            darthMaulBattle.remove();
-            console.log("meme");
-            battle.append("<div id='darthMaul' style='float: none; margin-left: 300px;'>150</div>");
+            battle.append("<div id='maceWindu'>" + maceWindu.healthPoints + "</div>  <p style='color: red; padding-left: 500px; padding-right: 500px; text-decoration: overline;'>VERSUS");
         });
+
+
+        $("#enemyFighters").on("click", "#darthMaul", function () {
+            $(this).remove();
+            console.log("meme");
+
+            battle.append("<div id='darthMaul' style='float: none; margin-left: 50%; margin-top: -35px;'>" + darthMaulStats.healthPoints + "</div><div id='attack'>Attack!</div>");
+
+        });
+
+        $("#enemyFighters").on("click", "#hanSolo", function () {
+            $(this).remove();
+            console.log("meme");
+            battle.append("<div id='hanSolo' style='float: none; margin-left: 50%; margin-top: -35px;'>" + hanSoloStats.healthPoints + "</div><div id='attack'>Attack!</div>");
+        });
+
+        $("#enemyFighters").on("click", "#maceWindu", function () {
+            $(this).remove();
+            console.log("meme");
+            battle.append("<div id='maceWindu' style='float: none; margin-left: 50%; margin-top: -35px;'>" + maceWinduStats.healthPoints + "</div><div id='attack'>Attack!</div>");
+        });
+
+        $("#enemyFighters").on("click", "#obiWan", function () {
+            $(this).remove();
+            console.log("meme");
+            battle.append("<div id='obiWan' style='float: none; margin-left: 800px; margin-top: -35px;'>" + obiWanStats.healthPoints + "</div><div id='attack'>Attack!</div>");
+        });
+
+        $("#battle").on("click", "#attack", function () {
+            if(darthMaulStats.healthPoints <= 0){
+                $("#darthMaul").remove();
+                alert("You win!");
+            }
+            darthMaulStats.healthPoints = darthMaulStats.healthPoints - obiWanStats.attackPower;
+            obiWanStats.attackPower = obiWanStats.attackPower + 15;
+            $("#darthMaul").text(darthMaulStats.healthPoints);  
+           obiWanStats.healthPoints = obiWanStats.healthPoints - 5;
+            $("#obiWan").text(obiWanStats.healthPoints);  
+            console.log(obiWanStats);
+
+
+         
+        });
+
+
+
 
      //   darthMaulBattle.on("click", function() {
   //          alert("CLICKED!");
    //         allFighters.remove();
     //        battle.append("<div id='darthMaul'>150</div>");
-        
+
    // });
 
     </script>
