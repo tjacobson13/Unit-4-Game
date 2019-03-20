@@ -193,7 +193,7 @@
             enemyFighters.append("<div id='darthMaul'>150</div>");
             enemyFighters.append("<div id='hanSolo'>100</div>");
             enemyFighters.append("<div id='obiWan'>200</div>");
-            battle.append("<div id='maceWinduPicked'>" + maceWindu.healthPoints + "</div>  <p style='color: red; padding-left: 500px; padding-right: 500px; text-decoration: overline;'>VERSUS");
+            battle.append("<div id='maceWinduPicked'>" + maceWinduStats.healthPoints + "</div>  <p style='color: red; padding-left: 500px; padding-right: 500px; text-decoration: overline;'>VERSUS");
         });
 
 
@@ -224,8 +224,10 @@
         });
 
        
-      
+     //obiWAN  
         $("#battle").on("click", "#attack", function () {
+            if ($("#battle").has("#obiWanPicked").length > 0 && $("#battle").has("#darthMaul").length > 0) {
+                
             if(darthMaulStats.healthPoints <= 0){
                 $("#darthMaul").remove();
                 
@@ -240,8 +242,236 @@
             $('#yourFighters').remove();
 
 
-         
+        }
         });
+
+        $("#battle").on("click", "#attack", function () {
+            if ($("#battle").has("#obiWanPicked").length > 0 && $("#battle").has("#hanSolo").length > 0) {
+                
+            if(hanSoloStats.healthPoints <= 0){
+                $("#hanSolo").remove();
+                
+                alert("You win!");
+            }
+            hanSoloStats.healthPoints = hanSoloStats.healthPoints - obiWanStats.attackPower;
+            obiWanStats.attackPower = obiWanStats.attackPower + 15;
+            $("#hanSolo").text(hanSoloStats.healthPoints);  
+           obiWanStats.healthPoints = obiWanStats.healthPoints - 5;
+            $("#obiWanPicked").text(obiWanStats.healthPoints);  
+            console.log(obiWanStats);
+            $('#yourFighters').remove();
+
+
+        }
+        });
+
+        $("#battle").on("click", "#attack", function () {
+            if ($("#battle").has("#obiWanPicked").length > 0 && $("#battle").has("#maceWindu").length > 0) {
+                
+            if(maceWinduStats.healthPoints <= 0){
+                $("#maceWindu").remove();
+                
+                alert("You win!");
+            }
+            maceWinduStats.healthPoints = maceWinduStats.healthPoints - obiWanStats.attackPower;
+            obiWanStats.attackPower = obiWanStats.attackPower + 15;
+            $("#maceWindu").text(maceWinduStats.healthPoints);  
+           obiWanStats.healthPoints = obiWanStats.healthPoints - 5;
+            $("#obiWanPicked").text(obiWanStats.healthPoints);  
+            console.log(obiWanStats);
+            $('#yourFighters').remove();
+
+
+        }
+        });
+//mace WINDU
+        $("#battle").on("click", "#attack", function () {
+            if ($("#battle").has("#maceWinduPicked").length > 0 && $("#battle").has("#obiWan").length > 0) {
+                
+            if(obiWanStats.healthPoints <= 0){
+                $("#obiWan").remove();
+                $("#attack").remove();
+                alert("You win!");
+            }
+            obiWanStats.healthPoints = obiWanStats.healthPoints - maceWinduStats.attackPower;
+            maceWinduStats.attackPower = maceWinduStats.attackPower + 15;
+            $("#obiWan").text(obiWanStats.healthPoints);  
+           maceWinduStats.healthPoints = maceWinduStats.healthPoints - 5;
+            $("#maceWinduPicked").text(maceWinduStats.healthPoints);  
+            console.log(maceWinduStats);
+            $('#yourFighters').remove();
+
+
+        }
+        });
+
+        
+        $("#battle").on("click", "#attack", function () {
+            if ($("#battle").has("#maceWinduPicked").length > 0 && $("#battle").has("#darthMaul").length > 0) {
+                
+            if(darthMaulStats.healthPoints <= 0){
+                $("#darthMaul").remove();
+                $("#attack").remove();
+                alert("You win!");
+            }
+            darthMaulStats.healthPoints = darthMaulStats.healthPoints - maceWinduStats.attackPower;
+            maceWinduStats.attackPower = maceWinduStats.attackPower + 15;
+            $("#darthMaul").text(darthMaulStats.healthPoints);  
+           maceWinduStats.healthPoints = maceWinduStats.healthPoints - 5;
+            $("#maceWinduPicked").text(maceWinduStats.healthPoints);  
+            console.log(maceWinduStats);
+            $('#yourFighters').remove();
+
+
+        }
+        });
+
+        $("#battle").on("click", "#attack", function () {
+            if ($("#battle").has("#maceWinduPicked").length > 0 && $("#battle").has("#hanSolo").length > 0) {
+                
+            if(hanSoloStats.healthPoints <= 0){
+                $("#hanSolo").remove();
+                $("#attack").remove();
+                alert("You win!");
+            }
+            hanSoloStats.healthPoints = hanSoloStats.healthPoints - maceWinduStats.attackPower;
+            maceWinduStats.attackPower = maceWinduStats.attackPower + 15;
+            $("#hanSolo").text(hanSoloStats.healthPoints);  
+           maceWinduStats.healthPoints = maceWinduStats.healthPoints - 5;
+            $("#maceWinduPicked").text(maceWinduStats.healthPoints);  
+            console.log(maceWinduStats);
+            $('#yourFighters').remove();
+
+
+        }
+        });
+
+//darthMaul
+        $("#battle").on("click", "#attack", function () {
+            if ($("#battle").has("#darthMaulPicked").length > 0 && $("#battle").has("#obiWan").length > 0) {
+                
+            if(obiWanStats.healthPoints <= 0){
+                $("#obiWan").remove();
+                $("#attack").remove();
+                alert("You win!");
+            }
+            obiWanStats.healthPoints = obiWanStats.healthPoints - darthMaulStats.attackPower;
+            darthMaulStats.attackPower = darthMaulStats.attackPower + 15;
+            $("#obiWan").text(obiWanStats.healthPoints);  
+           darthMaulStats.healthPoints = darthMaulStats.healthPoints - 5;
+            $("#darthMaulPicked").text(darthMaulStats.healthPoints);  
+            console.log(darthMaulStats);
+            $('#yourFighters').remove();
+
+
+        }
+        });
+
+        $("#battle").on("click", "#attack", function () {
+            if ($("#battle").has("#darthMaulPicked").length > 0 && $("#battle").has("#hanSolo").length > 0) {
+                
+            if(hanSoloStats.healthPoints <= 0){
+                $("#hanSolo").remove();
+                $("#attack").remove();
+                alert("You win!");
+            }
+            hanSoloStats.healthPoints = hanSoloStats.healthPoints - darthMaulStats.attackPower;
+            darthMaulStats.attackPower = darthMaulStats.attackPower + 15;
+            $("#hanSolo").text(hanSoloStats.healthPoints);  
+           darthMaulStats.healthPoints = darthMaulStats.healthPoints - 5;
+            $("#darthMaulPicked").text(darthMaulStats.healthPoints);  
+            console.log(darthMaulStats);
+            $('#yourFighters').remove();
+
+
+        }
+        });
+
+
+        $("#battle").on("click", "#attack", function () {
+            if ($("#battle").has("#darthMaulPicked").length > 0 && $("#battle").has("#maceWindu").length > 0) {
+                
+            if(maceWinduStats.healthPoints <= 0){
+                $("#maceWindu").remove();
+                $("#attack").remove();
+                alert("You win!");
+            }
+            maceWinduStats.healthPoints = maceWinduStats.healthPoints - darthMaulStats.attackPower;
+            darthMaulStats.attackPower = darthMaulStats.attackPower + 15;
+            $("#maceWindu").text(maceWinduStats.healthPoints);  
+           darthMaulStats.healthPoints = darthMaulStats.healthPoints - 5;
+            $("#darthMaulPicked").text(darthMaulStats.healthPoints);  
+            console.log(darthMaulStats);
+            $('#yourFighters').remove();
+
+
+        }
+        });
+
+
+        //han solo
+        $("#battle").on("click", "#attack", function () {
+            if ($("#battle").has("#hanSoloPicked").length > 0 && $("#battle").has("#obiWan").length > 0) {
+                
+            if(obiWanStats.healthPoints <= 0){
+                $("#obiWan").remove();
+                $("#attack").remove();
+                alert("You win!");
+            }
+            obiWanStats.healthPoints = obiWanStats.healthPoints - hanSoloStats.attackPower;
+            hanSoloStats.attackPower = hanSoloStats.attackPower + 15;
+            $("#obiWan").text(obiWanStats.healthPoints);  
+           hanSoloStats.healthPoints = hanSoloStats.healthPoints - 5;
+            $("#hanSoloPicked").text(hanSoloStats.healthPoints);  
+            console.log(hanSoloStats);
+            $('#yourFighters').remove();
+
+
+        }
+        });
+
+        $("#battle").on("click", "#attack", function () {
+            if ($("#battle").has("#hanSoloPicked").length > 0 && $("#battle").has("#darthMaul").length > 0) {
+                
+            if(darthMaulStats.healthPoints <= 0){
+                $("#darthMaul").remove();
+                $("#attack").remove();
+                alert("You win!");
+            }
+            darthMaulStats.healthPoints = darthMaulStats.healthPoints - hanSoloStats.attackPower;
+            hanSoloStats.attackPower = hanSoloStats.attackPower + 15;
+            $("#darthMaul").text(darthMaulStats.healthPoints);  
+           hanSoloStats.healthPoints = hanSoloStats.healthPoints - 5;
+            $("#hanSoloPicked").text(hanSoloStats.healthPoints);  
+            console.log(hanSoloStats);
+            $('#yourFighters').remove();
+
+
+        }
+        });
+
+        $("#battle").on("click", "#attack", function () {
+            if ($("#battle").has("#hanSoloPicked").length > 0 && $("#battle").has("#maceWindu").length > 0) {
+                
+            if(maceWinduStats.healthPoints <= 0){
+                $("#maceWindu").remove();
+                $("#attack").remove();
+                alert("You win!");
+            }
+            maceWinduStats.healthPoints = maceWinduStats.healthPoints - hanSoloStats.attackPower;
+            hanSoloStats.attackPower = hanSoloStats.attackPower + 15;
+            $("#maceWindu").text(maceWinduStats.healthPoints);  
+           hanSoloStats.healthPoints = hanSoloStats.healthPoints - 5;
+            $("#hanSoloPicked").text(hanSoloStats.healthPoints);  
+            console.log(hanSoloStats);
+            $('#yourFighters').remove();
+
+
+        }
+        });
+
+
+        
     
 
 
