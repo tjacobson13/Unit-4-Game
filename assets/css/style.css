@@ -100,21 +100,29 @@ h2 {
 #obiWanPicked {
     background-image: url("../images/obiWan.jpg");
     background-size: cover;
+    border: 4px solid green;
+    border-radius: 5px;
 }
 
 #darthMaulPicked {
     background-image: url("../images/darthMaul.jpg");
     background-size: cover;
+    border: 4px solid green;
+    border-radius: 5px;
 }
 
 #hanSoloPicked {
     background-image: url("../images/hanSolo.jpg");
     background-size: cover;
+    border: 4px solid green;
+    border-radius: 5px;
 }
 
 #maceWinduPicked {
     background-image: url("../images/maceWindu.jpg");
     background-size: cover;
+    border: 4px solid green;
+    border-radius: 5px;
 }
 
 
