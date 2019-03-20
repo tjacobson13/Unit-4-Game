@@ -230,7 +230,7 @@
                 
             if(darthMaulStats.healthPoints <= 0){
                 $("#darthMaul").remove();
-                
+                $("#attack").remove();
                 alert("You win!");
             }
             darthMaulStats.healthPoints = darthMaulStats.healthPoints - obiWanStats.attackPower;
@@ -250,7 +250,7 @@
                 
             if(hanSoloStats.healthPoints <= 0){
                 $("#hanSolo").remove();
-                
+                $("#attack").remove();
                 alert("You win!");
             }
             hanSoloStats.healthPoints = hanSoloStats.healthPoints - obiWanStats.attackPower;
@@ -270,7 +270,7 @@
                 
             if(maceWinduStats.healthPoints <= 0){
                 $("#maceWindu").remove();
-                
+                $("#attack").remove();
                 alert("You win!");
             }
             maceWinduStats.healthPoints = maceWinduStats.healthPoints - obiWanStats.attackPower;
