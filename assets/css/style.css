@@ -47,6 +47,20 @@ h2 {
     cursor: pointer;
 }
 
+#obiWanPicked, #darthMaulPicked, #hanSoloPicked, #maceWinduPicked {
+    height: 200px;
+    width: 25%;
+    border: 1px solid white;
+    float: left;
+    opacity: .8;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-display: block;
+    font-size: 40px;
+    color: red;
+    cursor: pointer;
+}
+
 #obiWan:hover, #darthMaul:hover, #hanSolo:hover, #maceWindu:hover {
     height: 200px;
     width: 25%;
@@ -81,22 +95,24 @@ h2 {
     background-size: cover;
 }
 
-#obiWanBattle {
+
+
+#obiWanPicked {
     background-image: url("../images/obiWan.jpg");
     background-size: cover;
 }
 
-#darthMaulBattle {
+#darthMaulPicked {
     background-image: url("../images/darthMaul.jpg");
     background-size: cover;
 }
 
-#hanSoloBattle {
+#hanSoloBattlePicked {
     background-image: url("../images/hanSolo.jpg");
     background-size: cover;
 }
 
-#maceWinduBattle {
+#maceWinduBattlePicked {
     background-image: url("../images/maceWindu.jpg");
     background-size: cover;
 }

@@ -168,7 +168,7 @@
             enemyFighters.append("<div id='darthMaul'>150</div>");
             enemyFighters.append("<div id='hanSolo'>100</div>");
             enemyFighters.append("<div id='maceWindu'>200</div>");
-            battle.append("<div id='obiWan'>" + obiWanStats.healthPoints + "</div>  <p style='color: red; padding-left: 500px; padding-right: 500px; text-decoration: overline; '>VERSUS");
+            battle.append("<div id='obiWanPicked'>" + obiWanStats.healthPoints + "</div>  <p style='color: red; padding-left: 500px; padding-right: 500px; text-decoration: overline; '>VERSUS");
 
         });
         darthMaul.click(function () {
@@ -177,7 +177,7 @@
             enemyFighters.append("<div id='obiWan'>150</div>");
             enemyFighters.append("<div id='hanSolo'>100</div>");
             enemyFighters.append("<div id='maceWindu'>200</div>");
-            battle.append("<div id='darthMaul'>" + darthMaulStats.healthPoints + "</div>  <p style='color: red; padding-left: 500px; padding-right: 500px; text-decoration: overline; '>VERSUS");
+            battle.append("<div id='darthMaulPicked'>" + darthMaulStats.healthPoints + "</div>  <p style='color: red; padding-left: 500px; padding-right: 500px; text-decoration: overline; '>VERSUS");
         });
         hanSolo.click(function () {
             allFighters.remove();
@@ -185,7 +185,7 @@
             enemyFighters.append("<div id='darthMaul'>150</div>");
             enemyFighters.append("<div id='obiWan'>100</div>");
             enemyFighters.append("<div id='maceWindu'>200</div>");
-            battle.append("<div id='hanSolo'>" + hanSoloStats.healthPoints + "</div>  <p style='color: red; padding-left: 500px; padding-right: 500px; text-decoration: overline; '>VERSUS");
+            battle.append("<div id='hanSoloPicked'>" + hanSoloStats.healthPoints + "</div>  <p style='color: red; padding-left: 500px; padding-right: 500px; text-decoration: overline; '>VERSUS");
         });
         maceWindu.click(function () {
             allFighters.remove();
@@ -193,7 +193,7 @@
             enemyFighters.append("<div id='darthMaul'>150</div>");
             enemyFighters.append("<div id='hanSolo'>100</div>");
             enemyFighters.append("<div id='obiWan'>200</div>");
-            battle.append("<div id='maceWindu'>" + maceWindu.healthPoints + "</div>  <p style='color: red; padding-left: 500px; padding-right: 500px; text-decoration: overline;'>VERSUS");
+            battle.append("<div id='maceWinduPicked'>" + maceWindu.healthPoints + "</div>  <p style='color: red; padding-left: 500px; padding-right: 500px; text-decoration: overline;'>VERSUS");
         });
 
 
@@ -223,22 +223,26 @@
             battle.append("<div id='obiWan' style='float: none; margin-left: 800px; margin-top: -35px;'>" + obiWanStats.healthPoints + "</div><div id='attack'>Attack!</div>");
         });
 
+       
+      
         $("#battle").on("click", "#attack", function () {
             if(darthMaulStats.healthPoints <= 0){
                 $("#darthMaul").remove();
+                
                 alert("You win!");
             }
             darthMaulStats.healthPoints = darthMaulStats.healthPoints - obiWanStats.attackPower;
             obiWanStats.attackPower = obiWanStats.attackPower + 15;
             $("#darthMaul").text(darthMaulStats.healthPoints);  
            obiWanStats.healthPoints = obiWanStats.healthPoints - 5;
-            $("#obiWan").text(obiWanStats.healthPoints);  
+            $("#obiWanPicked").text(obiWanStats.healthPoints);  
             console.log(obiWanStats);
+            $('#yourFighters').remove();
 
 
          
         });
-
+    
 
 
 
