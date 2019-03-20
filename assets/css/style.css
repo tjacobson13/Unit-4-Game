@@ -31,6 +31,7 @@ h2 {
     font-size: 40px;
     color: red;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 #obiWanBattle, #darthMaulBattle, #hanSoloBattle, #maceWinduBattle {
@@ -170,7 +171,13 @@ h2 {
     cursor: pointer;
     position: absolute;
     margin-left: 26%;
+    font-style: oblique;
+    border: 2px solid white;
     
+}
+
+#attack:hover {
+    background-color: #777;
 }
 
 .navbar-nav {
