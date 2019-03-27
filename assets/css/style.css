@@ -1,0 +1,227 @@
+#gameModule {
+   
+   
+    opacity: 1;
+    width: 100%;
+    background-color: #6c757d;
+    float: left;
+    font-family: impact;
+    color: #FFD700;
+    text-shadow: 2px 2px black;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+#obiWan, #darthMaul, #hanSolo, #maceWindu {
+    height: 200px;
+    width: 25%;
+    border: 1px solid white;
+    float: left;
+    opacity: .8;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-display: block;
+    font-size: 40px;
+    color: red;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+#obiWanBattle, #darthMaulBattle, #hanSoloBattle, #maceWinduBattle {
+    height: 200px;
+    width: 25%;
+    border: 1px solid white;
+    float: left;
+    opacity: .8;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-display: block;
+    font-size: 40px;
+    color: red;
+    cursor: pointer;
+}
+
+#obiWanPicked, #darthMaulPicked, #hanSoloPicked, #maceWinduPicked {
+    height: 200px;
+    width: 25%;
+    border: 1px solid white;
+    float: left;
+    opacity: .8;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-display: block;
+    font-size: 40px;
+    color: red;
+    cursor: pointer;
+}
+
+#obiWan:hover, #darthMaul:hover, #hanSolo:hover, #maceWindu:hover {
+    height: 200px;
+    width: 25%;
+    border: 1px solid white;
+    float: left;
+    opacity: 1;
+
+}
+
+#obiWan {
+    background-image: url("../images/obiWan.jpg");
+    background-size: cover;
+}
+
+#darthMaul {
+    background-image: url("../images/darthMaul.jpg");
+    background-size: cover;
+}
+
+.darthMaul {
+    background-image: url("../images/darthMaul.jpg");
+    background-size: cover;
+}
+
+#hanSolo {
+    background-image: url("../images/hanSolo.jpg");
+    background-size: cover;
+}
+
+#maceWindu {
+    background-image: url("../images/maceWindu.jpg");
+    background-size: cover;
+}
+
+
+
+#obiWanPicked {
+    background-image: url("../images/obiWan.jpg");
+    background-size: cover;
+    border: 4px solid green;
+    border-radius: 5px;
+}
+
+#darthMaulPicked {
+    background-image: url("../images/darthMaul.jpg");
+    background-size: cover;
+    border: 4px solid green;
+    border-radius: 5px;
+}
+
+#hanSoloPicked {
+    background-image: url("../images/hanSolo.jpg");
+    background-size: cover;
+    border: 4px solid green;
+    border-radius: 5px;
+}
+
+#maceWinduPicked {
+    background-image: url("../images/maceWindu.jpg");
+    background-size: cover;
+    border: 4px solid green;
+    border-radius: 5px;
+}
+
+
+#allFighters {
+    font-size: 40px;
+    text-decoration: underline;
+
+}
+
+#yourFighters {
+    font-size: 40px;
+    text-decoration: underline;
+    width: 80%;
+    height: 300px;
+    margin: 0% 17% 0% 17%;
+
+}
+
+#enemyFighters {
+    font-size: 40px;
+    text-decoration: underline;
+    width: 80%;
+    height: 300px;
+    margin: 0% 17% 0% 17%;
+    display: block;
+}
+
+#battle {
+    font-size: 40px;
+    text-decoration: underline;
+    width: 80%;
+    height: 500px;
+    margin: 0% 17% 0% 17%;
+    float: left;
+    
+
+}
+
+#attack {
+    padding: 20px;
+    background-color: rgb(43, 43, 43);
+    border-radius: 5px;
+    color: #FFD700;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 25.2%;
+    font-style: oblique;
+    border: 2px solid black;
+    text-shadow: -1px;
+    
+}
+
+#attack:hover {
+    background-color: rgb(10, 10, 10);
+}
+
+.navbar-nav {
+    margin: auto;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 100%;
+    height: 100%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+    color: #444;
+}
+
+.footer {
+    background-color: #343a40;
+    height: 60px;
+    width: 100%;
+}
+
+.col-8 {
+
+}
+
+.col{
+    padding-left: 0rem;
+    padding-right: 0rem;
+    overflow: hidden;
+}
+
+.footer {
+    text-align: center;
+    
+}   
+
+.color {
+opacity: 1;
+float:left; 
+margin-right: 17px;
+color: green;
+}
